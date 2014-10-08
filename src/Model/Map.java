@@ -1,3 +1,4 @@
+package Model;
 class Map {
 	public void takeNewPoint(Position position, Snapshot snapshot) {
 		//TODO implements

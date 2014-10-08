@@ -1,3 +1,4 @@
+package Model;
 class Snapshot {
 	public int getDegreeMeasure(int measure) {
 		//TODO implements

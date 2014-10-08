@@ -1,3 +1,4 @@
+package Model;
 class Analyser {
 	public void takeDecision() {
 		//TODO implements

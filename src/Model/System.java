@@ -1,3 +1,4 @@
+package Model;
 class System {
 	public boolean login(User user) {
 		//TODO implements

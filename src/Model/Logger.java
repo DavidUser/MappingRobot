@@ -1,3 +1,4 @@
+package Model;
 class Logger {
 	public void registerLogin(User user) {
 		//TODO implements
