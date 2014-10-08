@@ -1,3 +1,3 @@
-interface Snapshot {
+interface ISnapshot {
 	public int getDegreeMeasure(int measure);
 }
