@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="Servidor/Model/NewPositionMessage.java"/>
+			<include name="Servidor/Model/ErrorMessage.java"/>
+			<include name="Servidor/Model/Message.java"/>
+			<include name="Servidor/Model/CommunicationControl.java"/>
+			<include name="Servidor/Model/Communication.java"/>
+			<include name="Servidor/Model/Analyser.java"/>
+			<include name="Servidor/Model/User.java"/>
+			<include name="Servidor/Model/System.java"/>
+			<include name="Servidor/Model/Map.java"/>
+			<include name="Servidor/Model/Snapshot.java"/>
+			<include name="Servidor/Model/SnapshotCollectionMessage.java"/>
+			<include name="Servidor/Model/Logger.java"/>
+		</javac>
+	</target>
+</project>
