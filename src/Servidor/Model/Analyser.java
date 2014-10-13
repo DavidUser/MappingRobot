@@ -3,8 +3,7 @@ package Servidor.Model;
 import Embarcado.logic.Position;
 
 public class Analyser {
-	public System unnamed_System_;
-	public Communication unnamed_Communication_;
+	public Communication communication;
 
 	public Analyser() {
 		throw new UnsupportedOperationException();

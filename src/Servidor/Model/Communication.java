@@ -1,8 +1,7 @@
 package Servidor.Model;
 
 public class Communication {
-	public Analyser unnamed_Analyser_;
-	public CommunicationControl unnamed_CommunicationControl_;
+	public CommunicationControl control;
 
 	private void write(byte msg) {
 		throw new UnsupportedOperationException();

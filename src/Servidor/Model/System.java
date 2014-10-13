@@ -1,8 +1,8 @@
 package Servidor.Model;
 
 public class System {
-	public Analyser unnamed_Analyser_;
-	public Map unnamed_Map_;
+	public Analyser analyser;
+	public Map map;
 
 	public System() {
 		throw new UnsupportedOperationException();

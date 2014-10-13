@@ -4,7 +4,7 @@ import java.util.Vector;
 import Servidor.Model.Snapshot;
 
 public class SnapshotCollectionMessage implements Message {
-	public Vector<Snapshot> unnamed_Snapshot_ = new Vector<Snapshot>();
+	public Vector<Snapshot> snapshotCollection = new Vector<Snapshot>();
 
 	public list<Snapshot> getSnapshots() {
 		throw new UnsupportedOperationException();
