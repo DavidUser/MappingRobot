@@ -7,7 +7,7 @@ public class SnapshotCollectionMessage implements Message {
 	public Vector<Snapshot> snapshotCollection = new Vector<Snapshot>();
 
 	public list<Snapshot> getSnapshots() {
-		throw new UnsupportedOperationException();
+		return this.snapshotCollection;
 	}
 
 	public int getTypeID() {

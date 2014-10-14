@@ -6,7 +6,7 @@ public class NewPositionMessage implements Message {
 	public Position position;
 
 	public Position getPosition() {
-		throw new UnsupportedOperationException();
+		return this.position;
 	}
 
 	public int getTypeID() {

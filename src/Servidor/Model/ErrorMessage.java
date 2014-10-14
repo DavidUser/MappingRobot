@@ -1,13 +1,15 @@
 package Servidor.Model;
 
 public class ErrorMessage implements Message {
+	private int level;
+	private String message;
 
 	public String getMessage() {
-		throw new UnsupportedOperationException();
+		return this.message;
 	}
 
 	public int getLevel() {
-		throw new UnsupportedOperationException();
+		return this.level;
 	}
 
 	public int getTypeID() {
