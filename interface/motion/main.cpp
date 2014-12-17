@@ -5,20 +5,24 @@
 
 #include "msp/msp430g2553.h"
 
+#define INTERFACE_PORT_OUT 	P1OUT
+#define INTERFACE_PORT_IN 	P1IN
+#define INTERFACE_PORT_DIR 	P1DIR
+#define CMD0	BIT0
+#define CMD1	BIT1
+#define TX	BIT2
+#define RX	BIT3
+
 void configureInterface() {
-	P1DIR |= BIT0;
-	P1DIR &= ~BIT4;
-	P1REN &= ~BIT4;
-	P2DIR &= ~(BIT0 | BIT1);
-	P2REN &= ~(BIT0 | BIT1);
-	P1OUT |= BIT0; // busy report
+	INTERFACE_PORT_DIR &= ~(CMD0 | CMD1 | RX);
+	INTERFACE_PORT_DIR |= TX; // busy report
 }
 
 int receiveCommand() {
-	P1OUT &= ~BIT0; // clear busy report
-	while (!(P1IN & BIT4)); // wait receive command report
-	int command = (P2IN & (BIT0 | BIT1));
-	P1OUT |= BIT0; // busy report
+	INTERFACE_PORT_OUT &= ~TX; // clear busy report
+	while (!(INTERFACE_PORT_IN & RX)); // wait receive command report
+	int command = INTERFACE_PORT_IN & (CMD0 | CMD1);
+	INTERFACE_PORT_OUT |= TX; // busy report
 	return command;
 }
 
