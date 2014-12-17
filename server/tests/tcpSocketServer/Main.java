@@ -13,7 +13,7 @@ class Main {
 			System.out.println("Client connected!");
 			String userInput;
 			while ((userInput = stdIn.readLine()) != null) {
-			    out.println(userInput);
+			        out.println(userInput);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
